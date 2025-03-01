@@ -1,0 +1,15 @@
+.btn-quantity {
+    background: #bcbab7; border: 1px solid #aca497; color: #121212; font-size: 105%; font-family: 'Nunito'; min-width: 34px; min-height: 32px; padding: 0px; text-align: center;
+    &.decrease {border-radius: 4px 0px 0px 4px;}
+    &.increase {border-radius: 0px 4px 4px 0px;}
+}
+.btn-read {background: transparent; border: none; font-size: 14px;  font-family: 'Nunito';  font-style: italic; color: #da2128; position: absolute; bottom: 17px; right: 19px;}
+.btn-cart {background-color: #83690b; color: #fff; padding: 9px 18px; border-radius: 4px; display: flex; align-items: flex-end; gap: 4px; line-height: 1;
+    svg {fill: #fff; width: 18px; height: 18px;}
+&:hover {background-color: #6b5505; transition: background-color 0.3s; }}
+.btn-whis {background: #fff; border: 1px solid #83690b; color: #83690b;  padding: 9px 18px; border-radius: 4px; display: flex; align-items: flex-end; gap: 4px; line-height: 1;
+    svg {fill: #83690b;  width: 18px; height: 18px;}
+&:hover {border: 1px solid #6b5505; 
+svg {fill: #6b5505;}}}
+.quantity-space {background: #fff;  font-size: 110%; font-family: 'Nunito'; font-weight: 500; padding: 0 16px; min-width: 34px; min-height: 32px; text-align: center; line-height: 1.6; border-top: 1px solid #aca497; border-bottom: 1px solid #aca497;z-index: 1;}
+.price-update {font-weight: 700 !important; font-family: 'Nunito'; font-size: 120%; line-height: 1.6; margin: 0;}

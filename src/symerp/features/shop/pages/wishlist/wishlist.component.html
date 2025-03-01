@@ -1,0 +1,51 @@
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 page-header">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-3 text-white animated slideInDown">Products</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a class="text-white" href="#">Shop</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Wishlist</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+  <div class="container-xxl py-5 course-yellow">
+    <div class="container">
+      <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+        <h6 class="section-title bg-white text-center text-yellow px-3">Wishlist</h6>
+        <h1 class="mb-5"></h1>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-4 col-md-6 wow fadeInUp" *ngFor="let course of products; let i = index"
+          [attr.data-wow-delay]="(i+1) * 0.2 + 's'">
+          <div class="course-item bg-yellow">
+            <div class="position-relative overflow-hidden">
+              <img class="img-fluid" [src]="course.image" alt="">
+            </div>
+            <div class=" p-4 pb-1">
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <h3 class="mb-0">{{ course.price }}</h3>
+              <div class="">
+                <ng-container *ngFor="let star of getRatingStars(course.rating)">
+                  <small class="fa fa-star text-yellow"></small>
+                </ng-container>
+                <small *ngIf="hasHalfStar(course.rating)" class="fa fa-star-half text-yellow"></small>
+                <small>({{ course.reviews }})</small>
+              </div>
+              </div>
+              <p class="mb-3"> <a href="/shop/product-details"> {{ course.title }}</a></p>
+              <button type="button" class="btn btn-cart">Move to Bag
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </div>
