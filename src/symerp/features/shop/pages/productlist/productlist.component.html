@@ -16,39 +16,59 @@
   </div>
   <!-- Header End -->
 <div class="container-xxl py-5 course-yellow">
-  <div class="container">
-    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-      <h6 class="section-title bg-white text-center text-yellow px-3">Products</h6>
-      <h1 class="mb-5"></h1>
+   <div class="d-flex align-items-start gap-5 px-3">
+    <div class="filter-wrapper" style="min-width: 200px;">
+      <h5>Filter</h5>
+      <div class="category">
+        <ul>
+          <li><input type="checkbox" name="ui" id="ui" checked><label for="ui">UI/UX</label></li>
+          <li><input type="checkbox" name="js" id="js" checked><label for="js">Js</label></li>
+          <li><input type="checkbox" name="html" id="html" checked><label for="html">HTML</label></li>
+        </ul>
+      </div>
+      <h5>Filter</h5>
+      <div class="category">
+        <ul>
+          <li><input type="checkbox" name="ui" id="ui" checked><label for="ui">UI/UX</label></li>
+          <li><input type="checkbox" name="js" id="js" checked><label for="js">Js</label></li>
+          <li><input type="checkbox" name="html" id="html" checked><label for="html">HTML</label></li>
+        </ul>
+      </div>
     </div>
-    <div class="row g-4 justify-content-center">
-      <div class="col-lg-3 col-md-6 wow fadeInUp" *ngFor="let course of products; let i = index"
-        [attr.data-wow-delay]="(i+1) * 0.2 + 's'">
-        <div class="course-item bg-yellow">
-          <div class="position-relative overflow-hidden">
-            <img class="img-fluid" [src]="course.image" alt="">
-            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                    <a href="#" class="flex-shrink-0 btn btn-sm btn-warning px-3 border-end" style="border-radius: 30px 0 0 30px;">
-                      <i class="fa fa-cart-plus text-black me-2"></i></a>
-                    <a href="#" class="flex-shrink-0 btn btn-sm btn-warning px-3" style="border-radius: 0 30px 30px 0;">
-                      <i class="far fa-heart text-back me-2"></i>
-                    </a>
-                  </div>
-          </div>
-          <div class="text-center p-4 pb-0">
-            <h3 class="mb-0">{{ course.price }}</h3>
-            <div class="mb-3">
-              <ng-container *ngFor="let star of getRatingStars(course.rating)">
-                <small class="fa fa-star text-yellow"></small>
-              </ng-container>
-              <small *ngIf="hasHalfStar(course.rating)" class="fa fa-star-half text-yellow"></small>
-              <small>({{ course.reviews }})</small>
+    <div class="pl-2">
+      <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+        <h6 class="section-title bg-white text-center text-yellow px-3">Products</h6>
+        <h1 class="mb-5"></h1>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-3 col-md-6 wow fadeInUp" *ngFor="let course of products; let i = index"
+          [attr.data-wow-delay]="(i+1) * 0.2 + 's'">
+          <div class="course-item bg-yellow">
+            <div class="position-relative overflow-hidden">
+              <img class="img-fluid" [src]="course.image" alt="">
+              <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                <a href="#" class="flex-shrink-0 btn btn-sm btn-warning px-3 border-end" style="border-radius: 30px 0 0 30px;">
+                  <i class="fa fa-cart-plus text-black me-2"></i></a>
+                <a href="#" class="flex-shrink-0 btn btn-sm btn-warning px-3" style="border-radius: 0 30px 30px 0;">
+                  <i class="far fa-heart text-back me-2"></i>
+                </a>
+              </div>
             </div>
-            <p class="mb-4"> <a href="/shop/product-details"> {{ course.title }}</a></p>
+            <div class="text-center p-4 pb-0">
+              <h3 class="mb-0">{{ course.price }}</h3>
+              <div class="mb-3">
+                <ng-container *ngFor="let star of getRatingStars(course.rating)">
+                  <small class="fa fa-star text-yellow"></small>
+                </ng-container>
+                <small *ngIf="hasHalfStar(course.rating)" class="fa fa-star-half text-yellow"></small>
+                <small>({{ course.reviews }})</small>
+              </div>
+              <p class="mb-4"> <a href="/shop/product-details"> {{ course.title }}</a></p>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-  </div>
+   </div>
 </div>

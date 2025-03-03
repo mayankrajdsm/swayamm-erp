@@ -3,6 +3,7 @@ import { ProductlistComponent } from "./pages/productlist/productlist.component"
 import { ProductComponent } from "./pages/product/product.component";
 import { CartComponent } from "./pages/cart/cart.component";
 import { WishlistComponent } from "./pages/wishlist/wishlist.component";
+import { BillingComponent } from "./pages/billing/billing.component";
 
 const Shop_Routes: Routes = [
     {
@@ -13,6 +14,7 @@ const Shop_Routes: Routes = [
             { path: 'product-details', component: ProductComponent },
             { path: 'wish-list', component: WishlistComponent },
             { path: 'cart', component: CartComponent },
+            { path: 'billing', component: BillingComponent },
         ]
     }
 ];

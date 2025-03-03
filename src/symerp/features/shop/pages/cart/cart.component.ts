@@ -1,5 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
+
+interface Product {
+  price: number;
+  // Add other product properties as needed
+}
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -90,4 +95,20 @@ export class CartComponent {
     }
   ];
   
+  @Input() product: Product = { price: 0 };
+      quantity: number = 1;
+    
+      get totalPrice(): number {
+        return this.product?.price ? this.product.price * this.quantity : 0;
+      }
+    
+      increaseQuantity(): void {
+        this.quantity++;
+      }
+    
+      decreaseQuantity(): void {
+        if (this.quantity > 1) {
+          this.quantity--;
+        }
+      }
 }
