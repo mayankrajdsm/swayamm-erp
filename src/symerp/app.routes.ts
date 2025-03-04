@@ -16,6 +16,7 @@ export const routes: Routes = [
     // { path: 'testimonial', component: TestimonialComponent },
     { path: 'account', loadChildren: () => import('./features/account/account-routes').then(feature => feature.Account_Routes) },
     { path: 'shop', loadChildren: () => import('./features/shop/shop.routes').then(feature => feature.Shop_Routes) },
+    { path: 'crm', loadChildren: () => import('./features/crm/crm.routes').then(feature => feature.CRM_Routes) },
     { path: 'register', component: RegisterComponent },
     { path: 'unauthorized', component: UnauthorizedComponent },
     { path: '**', component: PageNotFoundComponent },
