@@ -1,3 +1,9 @@
 .btn-cart { font-size: 12px; background-color: #83690b; color: #fff; padding: 8px 12px; border-radius: 4px; display: flex; align-items: flex-end; gap: 4px; line-height: 0.9;
     svg {fill: #fff; width: 14px; height: 14px;}
 &:hover {background-color: #6b5505; transition: background-color 0.3s; }}
+.course-item {
+    &:hover {
+        .delete-wish { background: #00000090; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; z-index: 1; right: 12px; top: 12px; position: absolute; transition: all 0.3s;}
+    }
+}
+.delete-wish {display: none;}

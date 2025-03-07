@@ -16,32 +16,61 @@
   </div>
   <!-- Header End -->
 <div class="container-xxl py-5 course-yellow">
-   <div class="d-flex align-items-start gap-5 px-3">
+   <div class="d-flex align-items-start gap-5 px-0">
     <div class="filter-wrapper" style="min-width: 200px;">
+     <!-- filter -1 -->
       <h5>Filter</h5>
       <div class="category">
         <ul>
-          <li><input type="checkbox" name="ui" id="ui" checked><label for="ui">UI/UX</label></li>
-          <li><input type="checkbox" name="js" id="js" checked><label for="js">Js</label></li>
-          <li><input type="checkbox" name="html" id="html" checked><label for="html">HTML</label></li>
+          <li class="checkbox-wrapper-4">
+            <input class="inp-cbx" id="uiux" type="checkbox"/>
+            <label class="cbx" for="uiux"> <span> <svg width="12px" height="10px"> <use xlink:href="#check-4"></use> </svg> </span> <span>UI/UX</span> </label>
+            <svg class="inline-svg"> <symbol id="check-4" viewbox="0 0 12 10"> <polyline points="1.5 6 4.5 9 10.5 1"></polyline> </symbol> </svg>
+        </li>
+          <li class="checkbox-wrapper-4">
+              <input class="inp-cbx" id="html" type="checkbox"/>
+              <label class="cbx" for="html"> <span> <svg width="12px" height="10px"> <use xlink:href="#check-4"></use> </svg> </span> <span>Html</span> </label>
+              <svg class="inline-svg"> <symbol id="check-4" viewbox="0 0 12 10"> <polyline points="1.5 6 4.5 9 10.5 1"></polyline> </symbol> </svg>
+          </li>
+          <li class="checkbox-wrapper-4">
+            <input class="inp-cbx" id="js" type="checkbox"/>
+            <label class="cbx" for="js"> <span> <svg width="12px" height="10px"> <use xlink:href="#check-4"></use> </svg> </span> <span>Js</span></label>
+            <svg class="inline-svg"> <symbol id="check-4" viewbox="0 0 12 10"> <polyline points="1.5 6 4.5 9 10.5 1"></polyline> </symbol> </svg>
+        </li>
         </ul>
       </div>
-      <h5>Filter</h5>
+      <!-- filter -1 -->
+
+      <!-- filter -1 -->
+      <h5>Design</h5>
       <div class="category">
         <ul>
-          <li><input type="checkbox" name="ui" id="ui" checked><label for="ui">UI/UX</label></li>
-          <li><input type="checkbox" name="js" id="js" checked><label for="js">Js</label></li>
-          <li><input type="checkbox" name="html" id="html" checked><label for="html">HTML</label></li>
+          <li class="checkbox-wrapper-4">
+            <input class="inp-cbx" id="id1" type="checkbox"/>
+            <label class="cbx" for="id1"> <span> <svg width="12px" height="10px"> <use xlink:href="#check-4"></use> </svg> </span> <span>UI/UX</span> </label>
+            <svg class="inline-svg"> <symbol id="check-4" viewbox="0 0 12 10"> <polyline points="1.5 6 4.5 9 10.5 1"></polyline> </symbol> </svg>
+        </li>
+          <li class="checkbox-wrapper-4">
+              <input class="inp-cbx" id="id2" type="checkbox"/>
+              <label class="cbx" for="id2"> <span> <svg width="12px" height="10px"> <use xlink:href="#check-4"></use> </svg> </span> <span>Html</span> </label>
+              <svg class="inline-svg"> <symbol id="check-4" viewbox="0 0 12 10"> <polyline points="1.5 6 4.5 9 10.5 1"></polyline> </symbol> </svg>
+          </li>
+          <li class="checkbox-wrapper-4">
+            <input class="inp-cbx" id="id3" type="checkbox"/>
+            <label class="cbx" for="id3"> <span> <svg width="12px" height="10px"> <use xlink:href="#check-4"></use> </svg> </span> <span>Js</span></label>
+            <svg class="inline-svg"> <symbol id="check-4" viewbox="0 0 12 10"> <polyline points="1.5 6 4.5 9 10.5 1"></polyline> </symbol> </svg>
+        </li>
         </ul>
       </div>
+      <!-- filter -1 -->
     </div>
     <div class="pl-2">
       <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
         <h6 class="section-title bg-white text-center text-yellow px-3">Products</h6>
         <h1 class="mb-5"></h1>
       </div>
-      <div class="row g-4 justify-content-center">
-        <div class="col-lg-3 col-md-6 wow fadeInUp" *ngFor="let course of products; let i = index"
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 wow fadeInUp" *ngFor="let course of products; let i = index"
           [attr.data-wow-delay]="(i+1) * 0.2 + 's'">
           <div class="course-item bg-yellow">
             <div class="position-relative overflow-hidden">
@@ -69,6 +98,5 @@
         </div>
       </div>
     </div>
-
    </div>
 </div>
